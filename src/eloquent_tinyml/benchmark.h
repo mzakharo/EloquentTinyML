@@ -23,7 +23,7 @@ namespace Eloquent {
                 size_t stop() {
                     elapsedInMicros = micros() - timeStart;
 
-                    return millis();
+                    return _millis();
                 }
 
                 /**
@@ -38,17 +38,17 @@ namespace Eloquent {
                 }
 
                 /**
-                 * Get elapsed time in millis
+                 * Get elapsed time in _millis
                  */
-                inline size_t millis() {
+                inline size_t _millis() {
                     return microseconds() / 1000;
                 }
 
                 /**
-                 * Alias for millis()
+                 * Alias for _millis()
                  */
                 inline size_t ms() {
-                    return millis();
+                    return _millis();
                 }
 
                 /**
